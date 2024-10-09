@@ -1,0 +1,170 @@
+body { 
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: slideBackground 12s infinite; /* Apply sliding background */
+    background-size: cover; /* Ensure the background covers the whole viewport */
+    color: white; /* Default text color for better visibility */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
+/* Header with Navigation */
+
+@keyframes slideBackground {
+    0% { background-image: url('../images/image2.jpg'); }
+    25% { background-image: url('../images/image1.jpeg'); }
+    50% { background-image: url('../images/image3.jpg'); }
+    75% { background-image: url('../images/image4.jpg'); }
+    100% { background-image: url('../images/image2.jpg'); }
+}
+
+.login-section,
+.signup-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    padding: 20px; /* Padding for responsiveness */
+}
+
+header {
+    background-color: rgba(34, 34, 34, 0.8); /* Slightly transparent dark background */
+    color: white;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    justify-content: center; /* Center navigation items */
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.login-form-container {
+    width: 100%; /* Full width for small screens */
+    max-width: 400px; /* Max width for larger screens */
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+}
+
+.signup-form-container {
+    width: 70%; /* Set Sign-Up form width to 70% */
+    max-width: 600px; /* Optional: Set a max width for larger screens */
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #68686c; /* Title color */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Align labels to the left */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Dark color for labels */
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] { /* Added text input for Sign-Up */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus { /* Added focus styles for text input */
+    border-color: #ff6200; /* Highlight color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.btn {
+    background-color: #ff6200;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Full width button */
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff4500; /* Darker shade on hover */
+}
+
+.signup-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: #ff6200; /* Color for sign-up link */
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .login-form-container {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+    h2 {
+        font-size: 24px; /* Adjust heading size */
+    }
+}
